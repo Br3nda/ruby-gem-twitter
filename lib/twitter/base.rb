@@ -6,9 +6,11 @@ module Twitter
     
     attr_reader :client
     
-    def initialize(client)
-      @client = client
+    def initialize(client={})
+#if (client)
+        @client = client
     end
+
     
     # Options: since_id, max_id, count, page, since
     def friends_timeline(query={})
